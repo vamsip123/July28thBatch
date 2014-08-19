@@ -1,3 +1,4 @@
+package com.h2kinfosys.tutorial.corejava.basics;
 class BasicMath {
 	public static void main(String args[]) {
 		// arithmetic using integers

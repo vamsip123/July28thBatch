@@ -1,3 +1,4 @@
+package com.h2kinfosys.tutorial.corejava.basics;
 public class BooleanLogicOperator {
 
 	public static void main(String[] args) {

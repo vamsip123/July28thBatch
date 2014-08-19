@@ -1,3 +1,4 @@
+package com.h2kinfosys.tutorial.corejava.loop;
 
 public class ForLoopExample {
 
@@ -7,9 +8,10 @@ public class ForLoopExample {
 				"1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111"
 		};
 		
-		/*for(int i = 0 ; i < binary.length ; i++) {
+		for(int i = 0 ; i < binary.length ; i++) {
 			System.out.println(binary[i]);
-		}*/
+		}
+		
 		/*
 		 * For Each Loop
 		 */

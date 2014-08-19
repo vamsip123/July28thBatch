@@ -1,3 +1,4 @@
+package com.h2kinfosys.tutorial.corejava.basics;
 class BitLogic {
 	public static void main(String args[]) {
 		/*String name = "Jayram";
