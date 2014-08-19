@@ -17,13 +17,13 @@ public class TwoDimensionalArray {
 		heightAge[2][1] = 7;
 		heightAge[2][2] = 8;
 		
-		System.out.println(heightAge[1][2]);
+//		System.out.println(heightAge[1][2]);
 		
-		int heightAge1[][] = {{1,2},
-							  {3,4}
-							};
-		
-		System.out.println(heightAge1[1][1]);
+		for(int heAg[] : heightAge) {
+			for(int ha : heAg) {
+				System.out.println(ha);
+			}
+		}
 		
 	}
 
