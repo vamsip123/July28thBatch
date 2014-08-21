@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.assignments;
+package com.h2kinfosys.tutorial.assignments.corejava;
 
 /**
  * Java program swaps two numbers using a temporary variable.
@@ -17,5 +17,4 @@ public class SwapNumbers {
 		// Do the same program without using a temporary variable
 		System.out.println( "x = "+ x +" y = " + y);
 	}
-
 }
