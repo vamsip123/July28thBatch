@@ -7,10 +7,12 @@ public class Person {
 	public int age = 0;
 	public String occupation = "";
 	public boolean isWorking;
+	public static String car = "Honda CRV";
 	
-	/*public Person() {
+	public Person(String name) {
+		this.name = name;
 		System.out.println("I m here... in default Constructor");
-	}*/
+	}
 	
 	public Person(String name , int height , int age) {
 		this.name = name;
