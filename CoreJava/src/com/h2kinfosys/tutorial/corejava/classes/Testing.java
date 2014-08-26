@@ -3,12 +3,12 @@ package com.h2kinfosys.tutorial.corejava.classes;
 public class Testing {
 	
 	public static void main(String[] args) {
-		Person jayram0 = new Person();
+		/*Person jayram0 = new Person();
 		jayram0.name = "Jayram";
 		jayram0.height = 6;
 		jayram0.age = 20;
-		
-		jayram0.details();
+		*/
+//		jayram0.details();
 		
 		/*Person jayram1 = jayram0;
 		
