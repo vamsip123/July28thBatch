@@ -3,6 +3,8 @@ package com.h2kinfosys.tutorial.corejava.classes;
 public class Testing {
 	
 	public static void main(String[] args) {
+		Person per = null;
+		
 		/*Person jayram0 = new Person();
 		jayram0.name = "Jayram";
 		jayram0.height = 6;
