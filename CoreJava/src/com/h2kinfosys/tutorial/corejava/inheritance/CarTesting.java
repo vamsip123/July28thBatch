@@ -18,6 +18,8 @@ public class CarTesting {
 		kia.mileage();
 		kia.commonFeature();
 		
-		System.out.println(kia.horsePower);
+//		System.out.println(kia.horsePower);
+		
+		System.out.println("TO String == "+kia);
 	}
 }
