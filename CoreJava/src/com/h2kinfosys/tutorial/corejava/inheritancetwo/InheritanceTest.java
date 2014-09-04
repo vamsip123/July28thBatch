@@ -28,7 +28,6 @@ public class InheritanceTest {
 		Person per = new ExtraFingerPerson("Nikhil",5, 7777);
 		per.numberOfFingers();
 //		per.goodHandwriting();
-		
 		per = new LongPerson("Sukhraj",7, 33333);
 		per.numberOfFingers();
 	}

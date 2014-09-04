@@ -7,5 +7,6 @@ public class InheritanceTesting {
 		emp.wearTie();
 //		JayramEmployee jayEmp = new JayramEmployee();
 //		jayEmp.wearTie();
+		
 	}
 }
