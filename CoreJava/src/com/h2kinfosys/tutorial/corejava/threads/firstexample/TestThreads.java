@@ -1,8 +1,9 @@
-package com.h2kinfosys.tutorial.corejava.threads;
+package com.h2kinfosys.tutorial.corejava.threads.firstexample;
 
 public class TestThreads {
 	public static void main(String[] args) {
-		FooRunnable r = new FooRunnable();
+		System.out.println();
+		/*FooRunnable r = new FooRunnable();
 		
 		Thread one = new Thread(r);
 		Thread two = new Thread(r);
@@ -14,6 +15,6 @@ public class TestThreads {
 		
 		three.start();
 		two.start();
-		one.start();
+		one.start();*/
 	}
 }

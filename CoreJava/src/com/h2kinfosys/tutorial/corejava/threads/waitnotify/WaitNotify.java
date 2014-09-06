@@ -5,14 +5,14 @@ public class WaitNotify {
 		ThreadB b = new ThreadB();
 		b.start();
 
-		synchronized (b) {
+		/*synchronized (b) {
 			System.out.println("WaitNotify.main()");
 			try {
 				System.out.println("Waiting for b to complete...");
 				b.wait();
 			} catch (InterruptedException e) {
 			}
-		}
+		}*/
 
 		System.out.println("Total is: " + b.total);
 	}

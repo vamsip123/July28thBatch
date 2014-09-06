@@ -2,7 +2,7 @@ package com.h2kinfosys.tutorial.corejava.threads.sync;
 
 public class AccountClient {
 	public static void main(String[] args) {
-		AccountHolder r = new AccountHolder();
+		AccountHolderCard r = new AccountHolderCard();
 		
 		Thread king = new Thread(r);
 		king.setName("King");

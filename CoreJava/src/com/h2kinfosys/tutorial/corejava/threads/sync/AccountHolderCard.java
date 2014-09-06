@@ -1,6 +1,6 @@
 package com.h2kinfosys.tutorial.corejava.threads.sync;
 
-public class AccountHolder implements Runnable {
+public class AccountHolderCard implements Runnable {
 	private Account acct = new Account();
 	public void run() {
 		for (int x = 0; x < 5; x++) {
@@ -10,7 +10,7 @@ public class AccountHolder implements Runnable {
 			}
 		}
 	}
-	private synchronized void makeWithdrawal(int amt) {
+	private  void makeWithdrawal(int amt) {
 		if (acct.getBalance() >= amt) {
 			System.out.println(Thread.currentThread().getName() + " is going to withdraw");
 			/*try {

@@ -45,7 +45,6 @@ class Calculator extends Thread {
 			for (int i = 0; i < 100; i++) {
 				total += i;
 			}
-			
 			notifyAll();
 		}
 	}
