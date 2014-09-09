@@ -42,8 +42,14 @@ class Calculator extends Thread {
 
 	public void run() {
 		synchronized (this) {
-			for (int i = 0; i < 100; i++) {
+			for (int i = 0; i < 5; i++) {
 				total += i;
+				try {
+					Thread.sleep(1000);
+					System.out.println("Waiting.......");
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 			notifyAll();
 		}

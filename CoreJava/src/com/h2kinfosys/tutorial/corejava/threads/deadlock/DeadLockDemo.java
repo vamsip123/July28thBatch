@@ -16,7 +16,7 @@ public class DeadLockDemo {
 	
 	private static class MyThread extends Thread {
 		public void run() {
-			synchronized (bike) {
+			synchronized (bike) { // 12:33:35
 				final String threadName = Thread.currentThread().getName();
 				System.out.println(threadName +" Holds lock on "+ bike);
 
@@ -31,12 +31,12 @@ public class DeadLockDemo {
 	
 	private static class YourThread extends Thread {
 		public void run() {
-			synchronized (helmet) {
+			synchronized (bike) { // 12:33:35
 				final String threadName = Thread.currentThread().getName();
 				System.err.println(threadName+" Holds lock on " + helmet);
 
 				System.err.println(threadName+" waiting for lock on " + bike);
-				synchronized (bike) {
+				synchronized (helmet) {
 					System.err.println(threadName+" Holds lock on both Objects");
 				}
 				System.err.println("END OF "+threadName);

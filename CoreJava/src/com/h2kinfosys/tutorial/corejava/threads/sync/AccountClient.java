@@ -11,5 +11,10 @@ public class AccountClient {
 		Thread queen = new Thread(r);
 		queen.setName("Queen");
 		queen.start();
+//		queen.setPriority(5);
+		
+		Thread prince = new Thread(r);
+		prince.setName("Price");
+		prince.start();
 	}
 }
