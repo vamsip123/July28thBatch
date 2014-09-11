@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author Jayram
  *
  */
-public class Person implements Serializable {
+public class Person extends Human {
 	
 //	private static final long serialVersionUID = 1395426454629109273L;
 	
