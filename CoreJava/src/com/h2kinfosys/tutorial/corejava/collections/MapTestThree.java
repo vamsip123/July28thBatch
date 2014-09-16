@@ -2,6 +2,7 @@ package com.h2kinfosys.tutorial.corejava.collections;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -18,23 +19,49 @@ public class MapTestThree {
 		personList.add(per1);
 		personList.add(per2);
 		
+		ArrayList<Integer> intList = new ArrayList<Integer>();
+		intList.add(0);
+		intList.add(2);
+		intList.add(10);
+		//..
+		intList.add(1000000);
+		
+		for(int i = 0 ; i < intList.size() ; i++) {
+			if(intList.get(i) == 9999999) {
+				System.out.println("Value present");
+			}
+		}
+		
+//		System.out.println(personList);
+		
+		
 		Fruit apple = new Fruit("Apple","10");
 		Fruit orange = new Fruit("Orange","11");
 		List<Fruit> fruitList = new ArrayList<Fruit>();
 		
-		Map objectMap = new HashMap();
-		objectMap.put("person", personList);
+//		Map objectMap = new HashMap();
+		/*objectMap.put("person", personList);
+		objectMap.put("fruitList", fruitList);*/
 		
-		objectMap.put("fruitList", fruitList);
-		System.out.println(objectMap.get("person")); // 500
-		objectMap.get("Apple"); // 500
+//		System.out.println(objectMap.get("person")); // 500
 		
-		/*objectMap.put("one", "HELLO");
+//		objectMap.get("Apple"); // 500
+		
+		Map objectMap = new Hashtable();
+		
+		
+		objectMap.put("one", "HELLO");
+		objectMap.put("one", "Hello Two");
 		objectMap.put("two", "TWO");
 		objectMap.put("three", "THREE");
-		objectMap.put(null, null);*/
 		
-//		System.out.println(objectMap);
+		objectMap.put("five", "FIVE"); // 6000
+		objectMap.put("seven", "Seven Hill"); // 6000
+		
+		objectMap.put(null, null);
+		
+		System.out.println(objectMap.get("one"));
+		
 		//Person
 		
 		/*List<Person> personList1 = (List<Person>)objectMap.get("personList");

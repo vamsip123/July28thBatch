@@ -8,5 +8,11 @@ public class HashCode {
 		
 		System.out.println(code.hashCode());
 		System.out.println(code2.hashCode());
+		
+		
+		String one = new String("ONE");
+		String two = new String("ONE");
+		
+		System.out.println(one.equals(two));
 	}
 }

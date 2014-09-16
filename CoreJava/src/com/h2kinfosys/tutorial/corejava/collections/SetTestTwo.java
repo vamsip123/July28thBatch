@@ -2,31 +2,25 @@ package com.h2kinfosys.tutorial.corejava.collections;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class SetTestTwo {
 
 	public static void main(String[] args) {
-//		treeSet();
-		arrayListToTreeSet();
-		
-//		System.out.println(hashSset());
+		treeSet();
+//		arrayListToTreeSet();
+//		hashSset();
 	}
 	
-	// Person ssn , place
-	// Jayram , 1234 , concord
-	// Tanu , 1111, NY
-	// Raj, 23232, concord
-	
-	public static Set  hashSset(){
+	public static void  hashSset(){
 		Set hashSet = new HashSet();
 		hashSet.add("Apple");
 		hashSet.add("Apple");
 		hashSet.add("Orange");
 		hashSet.add("Banana");
-		
-		return hashSet;
+		System.out.println(hashSet);
 	}
 	
 	public static void treeSet(){
@@ -39,17 +33,22 @@ public class SetTestTwo {
 		System.out.println(treeSet);
 	}
 	
-	public static void arrayListToTreeSet(){
+	public static List getListOfFruits(){
 		ArrayList list =  new ArrayList();
 		list.add("12121");
 		list.add("Apple");
-		list.add("apple");
+		list.add("Apple");
 		list.add("Orange");
 		list.add("Banana");
+		return list;
+	}
+	
+	public static void arrayListToTreeSet(){
+		List fruitList = getListOfFruits();
 		
-		Set hashSet = new HashSet(list);
+		Set hashSet = new HashSet(fruitList);
 		
-		Set treeSet = new TreeSet(list);
+		Set treeSet = new TreeSet(fruitList);
 		
 //		System.out.println(list);
 		System.out.println(hashSet);

@@ -1,9 +1,8 @@
 package com.h2kinfosys.tutorial.corejava.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
-import com.h2kinfosys.tutorial.corejava.io.Person;
 
 public class CollectionExample {
 	public static void addMarksList(List<Integer> list) {
@@ -22,7 +21,23 @@ public class CollectionExample {
 		list.add(20);
 		list.add(30);
 		list.add(40);
-		System.out.println(list.get(10));
+//		System.out.println(list.get(10));
+		
+		/*for(int i = 0 ; i < list.size() ; i++) {
+			System.out.println((Integer)list.get(i));
+		}*/
+		
+		Iterator iter = list.iterator();
+		
+		while(iter.hasNext()){
+			Integer intValue = (Integer)iter.next();
+			if(intValue == 20){
+				iter.remove();
+			}
+//			System.out.println(iter.next());
+		}
+		
+		System.out.println("After Iteration = "+list);
 		
 //		list.add("Jay");
 		
@@ -32,7 +47,7 @@ public class CollectionExample {
 		}	
 		System.out.println("Final Value = "+ finalValue);*/
 		
-		addMarksList(list);
+//		addMarksList(list);
 
 		/*int i[] = new int[10];
 		i[0] = 45;
