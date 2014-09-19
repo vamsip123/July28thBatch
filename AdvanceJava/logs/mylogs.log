@@ -1,0 +1,64 @@
+[2014-09-18 21:11:40,979] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger
+[2014-09-18 21:11:40,992] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger Again
+[2014-09-18 21:11:40,992] INFO  - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is just for information
+[2014-09-18 21:11:40,992] ERROR - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is error
+[2014-09-18 21:11:40,992] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,992] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,992] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,992] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,993] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,994] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,995] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:11:40,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - 
+[2014-09-18 21:12:05,286] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger
+[2014-09-18 21:12:05,287] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger Again
+[2014-09-18 21:12:05,287] INFO  - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is just for information
+[2014-09-18 21:12:05,288] ERROR - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is error
+[2014-09-18 21:15:38,878] INFO  - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is just for information
+[2014-09-18 21:15:38,879] ERROR - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is error
+[2014-09-18 21:27:39,380] INFO  - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is just for information
+[2014-09-18 21:27:58,996] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger
+[2014-09-18 21:27:58,997] DEBUG - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - Hello Logger Again
+[2014-09-18 21:27:58,997] INFO  - main - com.h2kinfosys.tutorial.corejava.jdbc.LoggerExample main - This is just for information
