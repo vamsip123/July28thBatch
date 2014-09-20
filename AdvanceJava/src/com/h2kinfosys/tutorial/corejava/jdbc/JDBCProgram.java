@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -29,13 +31,19 @@ public class JDBCProgram {
 	 * MAIN METHOD
 	 */
 	public static void main(String ...arg) throws Exception {
+//		JDBCProgram jdbc = new JDBCProgram();
+//		List employeeList = jdbc.selectAllEmployeeNames();
+//		System.out.println(employeeList);
+		
+//		jdbc.selectQuery(100);
+		
 //				new JDBCProgram().selectQuery(200);
 //				new JDBCProgram().preparedStatement(100,"Steven");
 //				new JDBCProgram().createTable();
 //				new JDBCProgram().createProcedureShowEmployees();
 //				new JDBCProgram().callProcedure();
-//				new JDBCProgram().insertRowInDBAndRollBack(27, "Twenty 7");
-//				new JDBCProgram().savePoint();
+//				new JDBCProgram().insertRowInDBAndRollBack(29, "Twenty 9");
+				new JDBCProgram().savePoint();
 //				new JDBCProgram().addBatch();
 	}
 
@@ -58,20 +66,46 @@ public class JDBCProgram {
 			exp.printStackTrace();
 		}
 	}
+	/**
+	 * 
+	 * @return
+	 */
+	public List selectAllEmployeeNames() {
+		List list = new ArrayList();
+		try{
+			stmt = con.createStatement(); // Step 3
+			rs = stmt.executeQuery("select FIRST_NAME from employees"); // Step 4
+//			Employee emp = null;
+			while(rs.next()) {
+//				emp = new Employee();
+//				emp.setFirstName(rs.getString("FIRST_NAME"));
+//				emp.setLastName(rs.getString("LAST_NAME"));
+//				list.add(emp);
+				
+				list.add(rs.getString("FIRST_NAME"));
+			}
 
+		}catch(SQLException exp){
+			exp.printStackTrace();
+		}finally{
+			closeConnections(rs,stmt,con);
+		}
+		return list;
+	}
+	
 	/**
 	 * @param args
 	 * Statement
 	 */
 	public void selectQuery(int empid) {
+		//lookup thecache()
+		
 		try{
 			stmt = con.createStatement(); // Step 3
 			rs = stmt.executeQuery("select * from employees where employee_id = "+empid); // Step 4
 			while(rs.next()) {
-				
 				System.out.println(rs.getString("EMAIL")+" "+rs.getString("EMPLOYEE_ID") +" "+rs.getString("first_name") + " "+ rs.getString("last_name"));
 			}
-
 		}catch(SQLException exp){
 			exp.printStackTrace();
 		}finally{
@@ -107,7 +141,7 @@ public class JDBCProgram {
 
 			String SQL = "INSERT INTO H2KTable " + "VALUES (107, 'Rita')";
 			stmt.addBatch(SQL);
-
+			
 			String SQL2 = "INSERT INTO H2KTable " + "VALUES (105, 'Rita')";
 			stmt.addBatch(SQL2);
 
@@ -141,13 +175,13 @@ public class JDBCProgram {
 			Statement stmt = con.createStatement(); //set a Savepoint 
 
 			savepoint1 = con.setSavepoint("Savepoint1"); 
-			String SQL = "INSERT INTO H2KTable VALUES (102, 'Rita2')";
+			String SQL = "INSERT INTO H2KTable VALUES (111, 'Rita2')";
 
 
 			stmt.executeUpdate(SQL); //Submit a malformed SQL statement that breaks String SQL = "INSERTED IN Employees " + "VALUES (107, 22, 'Sita', 'Tez')"; stmt.executeUpdate(SQL); // If there is no error, commit the changes. conn.commit();
 
 			savepoint2 = con.setSavepoint("Savepoint2"); 
-			String SQL2 = "INSERT INTO H2KTable " + "VALUES (103, 'Rita3')";
+			String SQL2 = "INSERT INTO H2KTable " + "VALUES (222, 'Rita3')";
 
 			stmt.executeUpdate(SQL2);
 
