@@ -10,6 +10,6 @@ public interface EmployeeDetailDAO{
 	 * @param empid
 	 * @return
 	 */
-	public EmployeeDO getEmpDetail(String empid);
+	public List<EmployeeDO> getEmpDetail(String empid);
 	public List<EmployeeDO> getEmployees();
 }

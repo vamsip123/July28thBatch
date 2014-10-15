@@ -45,15 +45,17 @@ public class GetEmployeeDetail extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String empid = (String)request.getParameter("empid");
-		String type = (String) request.getParameter("type");
+		String flag = (String) request.getParameter("flag");
+		
 		List<EmployeeDO> employeeList = new ArrayList<EmployeeDO>();
 		HttpSession session = request.getSession();
 		
 		EmployeeDetailDAO dao = new EmployeeDetailDAOImpl();
 		if(empid != null && !"".equals(empid)){
-			EmployeeDO empObj = dao.getEmpDetail(empid);
-			employeeList.add(empObj);
-		}else{
+//			EmployeeDO empObj = dao.getEmpDetail(empid);
+//			employeeList.add(empObj);
+			employeeList = dao.getEmpDetail(empid);
+		}else if(flag.equals("yes")){
 			employeeList = dao.getEmployees();
 		}
 		
@@ -62,10 +64,11 @@ public class GetEmployeeDetail extends HttpServlet {
 //		session.setAttribute("empdetail", employeeList);
 		
 		String dispatcherURL = "";
-		if ("employee".equals(type))
+		/*if ("employee".equals(flag))
 			dispatcherURL = "/empdetail.jsp";
-		else
-			dispatcherURL = "/studdetail.jsp";
+		else*/
+
+			dispatcherURL = "/empdetail.jsp";
 		
 		RequestDispatcher rd = request.getRequestDispatcher(dispatcherURL);
 		rd.forward(request,response);

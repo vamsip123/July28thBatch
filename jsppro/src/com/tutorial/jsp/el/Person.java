@@ -1,6 +1,6 @@
 package com.tutorial.jsp.el;
 
-public class Person{
+public class Person {
 	private String name;
 	private Address address;
 	

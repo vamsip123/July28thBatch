@@ -2,7 +2,7 @@
 	<body>
 		<form action="GetEmployeeDetail" method="POST">
 			Enter EmpID : <input type="text" name="empid"><br>
-			<input type="hidden" name="type" value="employee"/>
+			Need All Employee : <input type="text" name="flag" value="all"/><br>
 			<input type="submit" value="Submit">
 		</form>
 	</body>

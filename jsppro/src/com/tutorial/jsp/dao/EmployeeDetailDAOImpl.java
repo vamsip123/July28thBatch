@@ -19,7 +19,7 @@ public class EmployeeDetailDAOImpl implements EmployeeDetailDAO{
 	ResultSet rs = null;
 
 	private static String driver = "oracle.jdbc.driver.OracleDriver";
-	static String connectionURL = "jdbc:oracle:thin:@localhost:1521/XE";
+	static String connectionURL = "jdbc:oracle:thin:@localhost:1521/xe";
 	/**
 	 * 
 	 * @param rs
@@ -52,7 +52,7 @@ public class EmployeeDetailDAOImpl implements EmployeeDetailDAO{
 		}
 
 		try{
-			con = DriverManager.getConnection(connectionURL,"hr","hr");
+			con = DriverManager.getConnection(connectionURL,"HR","HR");
 		}catch(Exception exp){
 			exp.printStackTrace();
 		}
@@ -88,7 +88,10 @@ public class EmployeeDetailDAOImpl implements EmployeeDetailDAO{
 		
 		return empList;		
 	}
-	public EmployeeDO getEmpDetail(String empid){
+	
+//	public EmployeeDO getEmpDetail(String empid){
+	public List<EmployeeDO> getEmpDetail(String empid){
+		List<EmployeeDO> empList = new ArrayList<EmployeeDO>();
 		EmployeeDO empdo = new EmployeeDO();
 		try{
 			stmt = con.createStatement();
@@ -98,14 +101,14 @@ public class EmployeeDetailDAOImpl implements EmployeeDetailDAO{
 				empdo.setFname(rs.getString("first_name"));
 				empdo.setLname(rs.getString("last_name"));
 				empdo.setEmail(rs.getString("email"));
+				empList.add(empdo);
 			}
-
 		}catch(SQLException exp){
 			exp.printStackTrace();
 		}finally{
 			closeConnections(rs,stmt,con);
 		}
 		
-		return empdo;
+		return empList.size() > 0 ? empList : null;
 	}
 }

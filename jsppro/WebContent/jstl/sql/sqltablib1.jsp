@@ -3,7 +3,7 @@
 <%@page isELIgnored="true"%>
 
 <sql:setDataSource driver="oracle.jdbc.driver.OracleDriver"
-	password="hr" user="hr" url="jdbc:oracle:thin:@localhost:1521/XE"
+	password="HR" user="HR" url="jdbc:oracle:thin:@localhost:1521/xe"
 	var="dataSource" scope="session"/>
  
 <%-- <sql:setDataSource dataSource="jdbc/myoracle" var="dataSource"/>
@@ -22,6 +22,6 @@
 	</c:forEach>
 </table>
 
-<sql:update dataSource="${dataSource}" var="updttble">
+<%-- <sql:update dataSource="${dataSource}" var="updttble">
     INSERT INTO emp(id,name,salary) VALUES(2,"alex","3000")
-</sql:update>
+</sql:update> --%>

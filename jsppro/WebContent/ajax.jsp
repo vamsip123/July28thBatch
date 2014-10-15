@@ -39,13 +39,13 @@
 		xmlhttp.open("GET", "makeAjaxCall", true); // true (asynchronous) or false (synchronous)
 		xmlhttp.send();
 		xmlhttp.onreadystatechange = function() {
-			alert("Status = "+ xmlhttp.status + " ReadyState= " + xmlhttp.readyState + " "+  xmlhttp.responseText);
+			//alert("Status = "+ xmlhttp.status + " ReadyState= " + xmlhttp.readyState + " "+  xmlhttp.responseText);
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				//alert("INSIDE Status = "+ xmlhttp.status + " ReadyState= " + xmlhttp.readyState);
+				alert(xmlhttp.responseText);
 				document.getElementById("myDiv").innerHTML = xmlhttp.responseText;//HELLO
 			}
 		}
-
 	}
 </script>
 </head>

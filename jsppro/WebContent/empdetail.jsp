@@ -13,8 +13,8 @@
 		out.println(empdo.getEmail() +" <br>");
 	}
 %>
- --%>
-<%-- <% 
+
+<% 
 	java.util.List<EmployeeDO> empDOList = (List<EmployeeDO>)request.getAttribute("empdetail");
 	
 	for(EmployeeDO empdo : empDOList){
@@ -25,15 +25,14 @@
 	<%=empdo.getEmail()%>
 <%		
 	}
-
 %> --%>
 
-<%-- <c:forEach var="emp" items="${empdetail}">
+<c:forEach var="emp" items="${empdetail}">
    EMPID <c:out value="${emp.empid}"/>
    Fname <c:out value="${emp.fname}"/>
    Lname <c:out value="${emp.lname}"/>
    Email <c:out value="${emp.email}"/><br>
-</c:forEach> --%>
+</c:forEach>
 
 	</body>
 </html>

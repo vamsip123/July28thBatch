@@ -2,15 +2,19 @@
 <%@page import="com.tutorial.jsp.el.*" %>
 
 
-<%= ((Person) request.getAttribute("person")).getAddress().getStreetName() %>
-
 <br>
 
 <% 
 	Person per = (Person)request.getAttribute("person");
-	out.println("TEsting"+ per.getAddress().getStreetName());
+	out.println("TEsting "+ per.getAddress().getStreetName());
+	out.println("TEsting "+ per.getName());
 %>
-
 <br>
 
-<c:out value="${person.address.streetName}" />
+<html>
+	<table>
+		<tr><c:out value="${person.address.streetName}"/></tr>
+	</table>
+</html>
+
+<c:out value="${person.name}" />
