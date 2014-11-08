@@ -31,18 +31,18 @@ public class Many2ManyClient {
 
 		Many2ManyClient mm = new Many2ManyClient();
 
-		mm.addEmployee("Rakesh", "Rout", 5000, certificates);
+		mm.addNewJoinee("Jayram", "Rout", 5000, certificates);
 
 	}
-	public Integer addEmployee(String fname, String lname, int salary, Set cert){ 
+	public Integer addNewJoinee(String fname, String lname, int salary, Set cert){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
-		Integer employeeID = null; 
+		Integer NewJoineeID = null; 
 		try{ 
 			tx = session.beginTransaction(); 
-			Employee employee = new Employee(fname, lname, salary); 
-			employee.setCertificates(cert); 
-			employeeID = (Integer) session.save(employee); 
+			NewJoinee newJoinee = new NewJoinee(fname, lname, salary); 
+			newJoinee.setCertificates(cert); 
+			NewJoineeID = (Integer) session.save(newJoinee); 
 			tx.commit(); 
 		}catch (HibernateException e) { 
 			if (tx!=null) 
@@ -51,21 +51,21 @@ public class Many2ManyClient {
 		}finally { 
 			session.close(); 
 		} 
-		return employeeID; 
+		return NewJoineeID; 
 	}
 
-	/* Method to list all the employees detail */ 
-	public void listEmployees( ){ 
+	/* Method to list all the NewJoinees detail */ 
+	public void listNewJoinees( ){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{ tx = session.beginTransaction(); 
-		List employees = session.createQuery("FROM Employee").list(); 
-		for (Iterator iterator1 = employees.iterator();iterator1.hasNext();){ 
-			Employee employee = (Employee) iterator1.next(); 
-			System.out.print("First Name: " + employee.getFirstName()); 
-			System.out.print(" Last Name: " + employee.getLastName()); 
-			System.out.println(" Salary: " + employee.getSalary()); 
-			Set certificates = employee.getCertificates(); 
+		List NewJoinees = session.createQuery("FROM NewJoinee").list(); 
+		for (Iterator iterator1 = NewJoinees.iterator();iterator1.hasNext();){ 
+			NewJoinee NewJoinee = (NewJoinee) iterator1.next(); 
+			System.out.print("First Name: " + NewJoinee.getFirstName()); 
+			System.out.print(" Last Name: " + NewJoinee.getLastName()); 
+			System.out.println(" Salary: " + NewJoinee.getSalary()); 
+			Set certificates = NewJoinee.getCertificates(); 
 			for (Iterator iterator2 = certificates.iterator(); iterator2.hasNext();){ 
 				Certificate certName = (Certificate) iterator2.next(); 
 				System.out.println("Certificate: " + certName.getName()); 
@@ -81,15 +81,15 @@ public class Many2ManyClient {
 		} 
 	}
 
-	/* Method to update salary for an employee */ 
-	public void updateEmployee(Integer EmployeeID, int salary ){ 
+	/* Method to update salary for an NewJoinee */ 
+	public void updateNewJoinee(Integer NewJoineeID, int salary ){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{ 
 			tx = session.beginTransaction(); 
-			Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
-			employee.setSalary( salary ); 
-			session.update(employee); 
+			NewJoinee NewJoinee = (NewJoinee)session.get(NewJoinee.class, NewJoineeID); 
+			NewJoinee.setSalary( salary ); 
+			session.update(NewJoinee); 
 			tx.commit(); 
 		}catch (HibernateException e) {
 			if (tx!=null) 
@@ -99,14 +99,14 @@ public class Many2ManyClient {
 			session.close(); 
 		} 
 	} 
-	/* Method to delete an employee from the records */ 
-	public void deleteEmployee(Integer EmployeeID){ 
+	/* Method to delete an NewJoinee from the records */ 
+	public void deleteNewJoinee(Integer NewJoineeID){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{
 			tx = session.beginTransaction(); 
-			Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
-			session.delete(employee); 
+			NewJoinee NewJoinee = (NewJoinee)session.get(NewJoinee.class, NewJoineeID); 
+			session.delete(NewJoinee); 
 			tx.commit(); 
 		}catch (HibernateException e) { 
 			if (tx!=null) tx.rollback(); 

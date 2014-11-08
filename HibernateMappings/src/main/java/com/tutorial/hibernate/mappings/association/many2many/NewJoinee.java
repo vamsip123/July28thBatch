@@ -3,16 +3,16 @@ package com.tutorial.hibernate.mappings.association.many2many;
 
 import java.util.Set;
 
-public class Employee{
+public class NewJoinee {
 	private int id; 
 	private String firstName; 
 	private String lastName; 
 	private int salary; 
 	private Set certificates;
 	
-	public Employee() {}
+	public NewJoinee() {}
 	
-	public Employee(String firstName, String lastName, int salary) {
+	public NewJoinee(String firstName, String lastName, int salary) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

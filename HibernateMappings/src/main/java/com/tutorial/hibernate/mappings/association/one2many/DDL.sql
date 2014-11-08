@@ -1,5 +1,4 @@
---Same address object can be associated with multiple employee objects
-create table EMPLOYEE ( 
+create table STUDENT ( 
 	id INT NOT NULL auto_increment, 
 	first_name VARCHAR(20) default NULL, 
 	last_name VARCHAR(20) default NULL, 
@@ -7,9 +6,9 @@ create table EMPLOYEE (
 	PRIMARY KEY (id) 
 	);
 
-create table CERTIFICATE ( 
+create table STUDENT_CERTIFICATE ( 
 	id INT NOT NULL auto_increment, 
 	certificate_name VARCHAR(30) default NULL, 
-	employee_id INT default NULL,
+	student_id INT default NULL,
 	PRIMARY KEY (id) 
 );

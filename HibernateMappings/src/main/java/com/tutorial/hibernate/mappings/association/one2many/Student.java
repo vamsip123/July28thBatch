@@ -2,16 +2,16 @@ package com.tutorial.hibernate.mappings.association.one2many;
 
 import java.util.Set;
 
-public class Employee{
+public class Student{
 	private int id; 
 	private String firstName; 
 	private String lastName; 
 	private int salary; 
 	private Set certificates;
 	
-	public Employee() {}
+	public Student() {}
 	
-	public Employee(String firstName, String lastName, int salary) {
+	public Student(String firstName, String lastName, int salary) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

@@ -29,23 +29,24 @@ public class One2ManyClient {
 		HashSet set1 = new HashSet();
 		
 		set1.add(new Certificate("SCJP")); 
-		set1.add(new Certificate("SCJP")); 
+		set1.add(new Certificate("ORACLE")); 
 		set1.add(new Certificate("MBA"));
 
 		One2ManyClient ec = new One2ManyClient();
 
-		ec.addEmployee("Jayram", "Rout", 5000, set1);
+		ec.addStudent("Jayram", "Rout", 5000, set1);
 
 	}
-	public Integer addEmployee(String fname, String lname, int salary, Set cert){ 
+	public Integer addStudent(String fname, String lname, int salary, Set cert){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
-		Integer employeeID = null; 
+		Integer studentId = null; 
 		try{ 
 			tx = session.beginTransaction(); 
-			Employee employee = new Employee(fname, lname, salary); 
-			employee.setCertificates(cert); 
-			employeeID = (Integer) session.save(employee); 
+			Student student = new Student(fname, lname, salary); 
+			student.setCertificates(cert); 
+			
+			studentId = (Integer) session.save(student); 
 			tx.commit(); 
 		}catch (HibernateException e) { 
 			if (tx!=null) 
@@ -54,21 +55,21 @@ public class One2ManyClient {
 		}finally { 
 			session.close(); 
 		} 
-		return employeeID; 
+		return studentId; 
 	}
 
-	/* Method to list all the employees detail */ 
-	public void listEmployees( ){ 
+	/* Method to list all the Students detail */ 
+	public void listStudents( ){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{ tx = session.beginTransaction(); 
-		List employees = session.createQuery("FROM Employee").list(); 
-		for (Iterator iterator1 = employees.iterator();iterator1.hasNext();){ 
-			Employee employee = (Employee) iterator1.next(); 
-			System.out.print("First Name: " + employee.getFirstName()); 
-			System.out.print(" Last Name: " + employee.getLastName()); 
-			System.out.println(" Salary: " + employee.getSalary()); 
-			Set certificates = employee.getCertificates(); 
+		List Students = session.createQuery("FROM Student").list(); 
+		for (Iterator iterator1 = Students.iterator();iterator1.hasNext();){ 
+			Student Student = (Student) iterator1.next(); 
+			System.out.print("First Name: " + Student.getFirstName()); 
+			System.out.print(" Last Name: " + Student.getLastName()); 
+			System.out.println(" Salary: " + Student.getSalary()); 
+			Set certificates = Student.getCertificates(); 
 			for (Iterator iterator2 = certificates.iterator(); iterator2.hasNext();){ 
 				Certificate certName = (Certificate) iterator2.next(); 
 				System.out.println("Certificate: " + certName.getName()); 
@@ -84,15 +85,15 @@ public class One2ManyClient {
 		} 
 	}
 
-	/* Method to update salary for an employee */ 
-	public void updateEmployee(Integer EmployeeID, int salary ){ 
+	/* Method to update salary for an Student */ 
+	public void updateStudent(Integer StudentID, int salary ){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{ 
 			tx = session.beginTransaction(); 
-			Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
-			employee.setSalary( salary ); 
-			session.update(employee); 
+			Student Student = (Student)session.get(Student.class, StudentID); 
+			Student.setSalary( salary ); 
+			session.update(Student); 
 			tx.commit(); 
 		}catch (HibernateException e) {
 			if (tx!=null) 
@@ -102,14 +103,14 @@ public class One2ManyClient {
 			session.close(); 
 		} 
 	} 
-	/* Method to delete an employee from the records */ 
-	public void deleteEmployee(Integer EmployeeID){ 
+	/* Method to delete an Student from the records */ 
+	public void deleteStudent(Integer StudentID){ 
 		Session session = factory.openSession(); 
 		Transaction tx = null; 
 		try{ 
 			tx = session.beginTransaction(); 
-			Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
-			session.delete(employee); 
+			Student Student = (Student)session.get(Student.class, StudentID); 
+			session.delete(Student); 
 			tx.commit(); 
 		}catch (HibernateException e) { 
 			if (tx!=null) tx.rollback(); 

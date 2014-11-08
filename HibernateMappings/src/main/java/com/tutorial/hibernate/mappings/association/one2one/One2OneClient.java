@@ -22,11 +22,13 @@ public class One2OneClient {
 			throw new ExceptionInInitializerError(ex); 
 		}
 
-		Address address1 = addAddress("Semi","BBSR","ORISSA","455555");
-		Integer empid1 = addEmployee("Jayram", "Rout", 3000, address1);
+//		Address address1 = addAddress("Semi","BBSR","ORISSA","455555");
+//		Integer empid1 = addEmployee("Jayram", "Rout", 3000, address1);
+//		
+//		Address address2 = addAddress("Semi","BBSR","ORISSA","455555");
+//		Integer empid2 = addEmployee("Tanu", "Rout", 5000, address2);
 		
-		Address address2 = addAddress("Semi","BBSR","ORISSA","455555");
-		Integer empid2 = addEmployee("Tanu", "Rout", 5000, address2);
+		listEmployees();
 	}
 	/**
 	 * 
