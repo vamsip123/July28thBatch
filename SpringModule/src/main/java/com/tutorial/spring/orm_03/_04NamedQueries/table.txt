@@ -1,6 +1,6 @@
-create table users
+create table dbuser
 (
-	userid number(5) primary key,
+	user_id number(5) primary key,
 	uname varchar2(20),
 	role varchar2(20)
 )

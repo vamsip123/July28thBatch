@@ -10,44 +10,43 @@
 		</property>
 		
 		<property name="url">
-		<value>jdbc:oracle:thin:@localhost:1521:satya</value>
+		<value>jdbc:oracle:thin:@localhost:1521:XE</value>
 		</property>
 		
 		<property name="username">
-			<value>scott</value>
+			<value>HR</value>
 		</property>
 		
 		<property name="password">
-		<value>tiger</value>
+		<value>HR</value>
 		</property>
 	</bean>
 	
-	<bean id = "mySessionFactory" class = "org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	<bean id = "mySessionFactory" class = "org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref = "ds"/>
 		
 		<property name="mappingResources">
 			<list>
-				<value>User.hbm.xml</value>
+				<value>com/tutorial/spring/orm_03/_04NamedQueries/User.hbm.xml</value>
 			</list>
 		</property>
 	
 	<property name="hibernateProperties">
 		<props>
 			<prop key="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</prop>
-			
 			<prop key="show_sql">true</prop>
 		</props>
 	</property>
 	</bean>
 	
 	
-	<bean id = "template" class = "org.springframework.orm.hibernate3.HibernateTemplate">
+	<bean id = "template" class = "org.springframework.orm.hibernate4.HibernateTemplate">
 		<constructor-arg>
 			<ref bean = "mySessionFactory"/>
 		</constructor-arg>
 	</bean>
 	
-	<bean id = "d1" class = "DemoClient">
+	<bean id = "d1" class = "com.tutorial.spring.orm_03._04NamedQueries.DemoClient">
 		<property name="ht" ref = "template"/>
 	</bean>
 
