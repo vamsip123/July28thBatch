@@ -24,10 +24,11 @@ public class OrderProcessClient {
 	        Order order = new Order();
 	        order.setCustomerID("001");
 	        order.setItemID("Item01");
-	        order.setPrice(20);
 	        order.setQty(1);
+	        order.setPrice(20);
 	        
 	        System.out.println(orderProcess.processOrder(order));
+	        
 		}catch (Exception exp) {
 			exp.printStackTrace();
 		}
