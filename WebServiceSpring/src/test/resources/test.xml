@@ -1,0 +1,95 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<wsse:Security
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+			xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+			soap:mustUnderstand="1">
+			<xenc:EncryptedKey xmlns:xenc="http://www.w3.org/2001/04/xmlenc#"
+				Id="EK-96AC9CB6C1BE7C301214163616824184">
+				<xenc:EncryptionMethod
+					Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" />
+				<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+					<wsse:SecurityTokenReference>
+						<ds:X509Data>
+							<ds:X509IssuerSerial>
+								<ds:X509IssuerName>CN=localhost</ds:X509IssuerName>
+								<ds:X509SerialNumber>747293687</ds:X509SerialNumber>
+							</ds:X509IssuerSerial>
+						</ds:X509Data>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+				<xenc:CipherData>
+					<xenc:CipherValue>eeqmn21GgfD4ZjqaeH4QkJS+Rhmlf1XlUPNp9jCWobPt03X7oyRqSJW33LdUKr37vVUOG9SMgVF5ZWTodqu/4Z0eXMKCkNylCjClvwT7wuAG9QKYCiVml3hrSOkp4gtplAXWoopf5gP9JnUlcn714s9G41dSMidmKk4GPK5uBSRtcAZ4Wu7E0bgQI6orY+cJTGx7adlDn0dfsMoyH383DLA1EzPcu+Klkdb0EPZQqtoMUBRR/w2ODoburg/uFe1/wJvp3UsH5i252itSk6f+oxEqAzHNptTSdr8roSiSvOBWyXQh5c6fNDDEfcyeTaE2eYzw28gMmXilqQ+xYoJlgg==</xenc:CipherValue>
+				</xenc:CipherData>
+				<xenc:ReferenceList>
+					<xenc:DataReference URI="#ED-4" />
+					<xenc:DataReference URI="#ED-5" />
+				</xenc:ReferenceList>
+			</xenc:EncryptedKey>
+			<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+				Id="SIG-3" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+				xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+				xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod
+						Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+						<ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"
+							PrefixList="soap" />
+					</ds:CanonicalizationMethod>
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+					<ds:Reference URI="#TS-1">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+								<ec:InclusiveNamespaces
+									xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="wsse soap" />
+							</ds:Transform>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+						<ds:DigestValue>Sgl1h2q9f8WNZRCO6BgOHFEYNeE=</ds:DigestValue>
+					</ds:Reference>
+					<ds:Reference URI="#id-2">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+								<ec:InclusiveNamespaces
+									xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="" />
+							</ds:Transform>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+						<ds:DigestValue>BFupHyFVW50qZDNuhztXKjlZj4k=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>X+FdWNN4ND2D5bgAqP70tjx8OcFc0ZXWPTkmk43l7o673TnwNFahkbz7fN3Sd9PB9y6jIvEjj4i4
+					tWBjV2NQ05rbc4iBKn457MUUmJDdZN3gxblM9FnVQn9fZHPfMMw6QAmE93SUi9gcCYNkciJiyOvT
+					fFbUcHLD+qn6+Aym0NjaYXhY8Avns8LSxeJB/FpnzvU8OWnKquGb4TtEBFL1Gg5QunEIJjKM7N4J
+					tayqwNgChZYAqS17UN/pR24thmOtxK63mMnNAElnu6YDSVU0bPB6xCNTWWpKjDbfVrmW1RnP9T66
+					oRkmf/OIVwfwmGnLuk2ncicZopZQ++yUaXUJkg==</ds:SignatureValue>
+				<ds:KeyInfo Id="KI-96AC9CB6C1BE7C301214163616821602">
+					<wsse:SecurityTokenReference wsu:Id="STR-96AC9CB6C1BE7C301214163616821613">
+						<ds:X509Data>
+							<ds:X509IssuerSerial>
+								<ds:X509IssuerName>CN=clientuser</ds:X509IssuerName>
+								<ds:X509SerialNumber>1712724536</ds:X509SerialNumber>
+							</ds:X509IssuerSerial>
+						</ds:X509Data>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+			</ds:Signature>
+			<wsu:Timestamp wsu:Id="TS-1">
+				<wsu:Created>2014-11-19T01:48:02.064Z</wsu:Created>
+				<wsu:Expires>2014-11-19T01:53:02.064Z</wsu:Expires>
+			</wsu:Timestamp>
+		</wsse:Security>
+	</soap:Header>
+	<soap:Body
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		wsu:Id="id-2">
+		<ns2:processOrder xmlns:ns2="http://ws.tutorial.com/">
+			<arg0>
+				<customerID>001</customerID>
+				<itemID>Item01</itemID>
+				<price>20.0</price>
+				<qty>1</qty>
+			</arg0>
+		</ns2:processOrder>
+	</soap:Body>
+</soap:Envelope>
